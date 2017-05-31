@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0;padding:0;}
+.margin{margin:0 auto;width:1200px;}
+
+header{height:25px;background:#333;}
+header ul{float:right;}
+header ul li{float:left;color:#e5e5e5;font:12px/25px "";}
+header ul li a{display:block; color:#e5e5e5;}
+#header-r li{width:82px;text-align: center;background:url(../img/xiasanjiao.png) no-repeat right;}
+#header-r li:nth-child(1){background: none;}
+.hover:hover{color:red;}
+#header-l li{margin-right:6px;}
+nav{height:75px;}
+#logo{float:left;margin:25px 0 0 5px;}
+#logo span{vertical-align:bottom;margin-top:32px;font-size:22px;font-weight:700;color:#d70c18;}
+#nav{float:left;margin:36px 0 0 30px;}
+#nav ul li{float:left;margin:0 29px;font:14px "";color:#333;}
+#nav ul li a:hover{color:red;}
