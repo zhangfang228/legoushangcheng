@@ -3,12 +3,12 @@
 	<head>
 		<meta charset="utf-8" />
 		<title></title>
-		<link href="css/style.css" rel="stylesheet" type="text/css">
+		<link href="css/index.css" rel="stylesheet" type="text/css">
 		<link href="css/public.css" rel="stylesheet" type="text/css">
 	</head>
 	<body>
 		<header>
-	<div class="margin">
+	<div class="margin clear" style="position:relative";>
 		 
 		
 		<ul id="header-r">
@@ -16,13 +16,34 @@
             	<a href="#" class="hover">个人中心</a>
             </li>
         	<li>
-            	<a href="#">合作渠道</a>
+            	<a href="#" class="header-a">合作渠道</a>
+            	<div class="menu1 menu" style="position:absolute;display:none">
+            		<a href="#">大客户通道</a>
+            		<a href="#">Le Par</a>
+            		<a href="#">销售联盟</a>
+            	</div>
             </li>
         	<li>
-            	<a href="#">帮助中心</a>
+            	<a href="#" class="header-a">帮助中心</a>
+            	<div class="menu2 menu" style="position:absolute;display:none">
+            		<a href="#">配送安装</a>
+            		<a href="#">售后服务</a>
+            		<a href="#">运费标准</a>
+            		<a href="#">联系客服</a>
+            	</div>
             </li>
             <li>
-            	<a href="#">手机版</a>
+            	<a href="#" class="header-a">手机版</a>
+            	<div class="menu3 menu" style="position:absolute;right:3px;display:none">
+            		<div class="app">
+            			<img src="img/App.png" />
+            			<p>扫描下载App</p>
+            		</div>
+            		<div class="weishangcheng">
+            			<img src="img/weishangcheng.png" />
+            			<p>扫描访问微商城</p>
+            		</div>
+            	</div>
             </li>
         </ul>
         <ul id="header-l">
@@ -38,7 +59,7 @@
         </ul>
 	</div>
 </header>
-<nav class="margin">
+<nav class="margin clear">
 	<div id="logo">
 		<a href="#"><img src="img/logo.png" /><span>乐购商城</span></a>
 	</div>
@@ -49,28 +70,18 @@
 			<li><a href="#" >MFL . 智能系列</a></li>
 		</ul>
 	</div>
-	
-	
+	<div id="search">
+		<input type="text" placeholder="超4 X55M" />		
+		<a href="#"></a>							
+	</div>
+	<div id="gouwuche">
+		<a href="#"></a>
+	</div>
 </nav>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<div id="box">
+		
+</div>
 
 
 
@@ -80,3 +91,49 @@
 
 	</body>
 </html>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/lunbotu.js" ></script>
+<script type="text/javascript">	
+$(function(){
+	//$(".menu1").hide();
+	$("#header-r").delegate("li","mouseenter",function(){
+		$(this).find(".header-a").css({background:"#fff",color:"#333"}).siblings().find(".header-a").css({background:"#333 url(../img/xiasanjiao.png) no-repeat right;",color:"#e5e5e5"});
+		$(this).find(".menu").show();
+	});
+	$("#header-r").delegate("li","mouseleave",function(){
+		$(this).find(".header-a").css({background:"#333",color:"#e5e5e5"});
+		$(this).find(".menu").hide();
+	});		
+	
+	
+	
+	new Slideshow
+	({boxId:"#box",
+	imgs:["img/banner01.jpg","img/banner02.jpg","img/banner03.jpg","img/banner04.jpg","img/banner05.jpg","img/banner06.jpg"],
+	width:1280,
+	height:520,
+	timeSpace:3000,
+	fadeInOutTime:2000,
+	btnColor:"#000",
+	btnHighColor:"#fff",
+	btnWidth:52,
+	btnHeight:2,
+	btnHasOrd:false
+	});
+	
+	
+	
+	
+	
+	
+	
+	
+});
+	
+
+	
+	
+	
+</script>
+
+
