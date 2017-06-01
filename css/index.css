@@ -1,0 +1,117 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0; }
+
+.margin {
+  margin: 0 auto;
+  width: 1200px; }
+
+header {
+  height: 25px;
+  background: #333; }
+  header ul {
+    float: right; }
+    header ul li {
+      float: left;
+      color: #e5e5e5;
+      font: 12px/25px ""; }
+      header ul li a {
+        display: block;
+        color: #e5e5e5; }
+  header #header-r li {
+    width: 82px;
+    text-align: center;
+    background: url(../img/xiasanjiao.png) no-repeat right; }
+    header #header-r li :first-child {
+      background: none; }
+    header #header-r li .menu1 {
+      z-index: 10;
+      width: 82px;
+      height: 75px;
+      text-align: center;
+      background: #fff; }
+      header #header-r li .menu1 a {
+        color: #333; }
+    header #header-r li .menu2 {
+      z-index: 10;
+      width: 82px;
+      height: 100px;
+      text-align: center;
+      background: #fff; }
+      header #header-r li .menu2 a {
+        color: #333; }
+    header #header-r li .menu3 {
+      z-index: 10;
+      width: 286px;
+      height: 170px;
+      background: #fff; }
+      header #header-r li .menu3 .app {
+        float: left;
+        margin: 20px; }
+        header #header-r li .menu3 .app p {
+          font-size: 12px;
+          color: #999; }
+      header #header-r li .menu3 .weishangcheng {
+        float: left;
+        margin: 20px 20px 20px 0; }
+        header #header-r li .menu3 .weishangcheng p {
+          font-size: 12px;
+          color: #999; }
+  header .hover:hover {
+    color: red; }
+  header #header-l li {
+    margin-right: 6px; }
+
+nav {
+  height: 75px; }
+  nav #logo {
+    float: left;
+    margin: 25px 0 0 5px; }
+    nav #logo span {
+      vertical-align: bottom;
+      margin-top: 32px;
+      font-size: 22px;
+      font-weight: 700;
+      color: #d70c18; }
+  nav #nav {
+    float: left;
+    margin: 36px 0 0 30px; }
+    nav #nav ul li {
+      float: left;
+      margin: 0 19px;
+      font: 14px "";
+      color: #333; }
+      nav #nav ul li a:hover {
+        color: red; }
+  nav #search {
+    float: left;
+    margin: 27px 0 0 136px; }
+    nav #search input {
+      float: left;
+      font: 12px/30px "宋体";
+      border: none;
+      height: 30px;
+      width: 252px;
+      border-bottom: 1px solid #ccc;
+      color: #d5cccf; }
+    nav #search a {
+      float: left;
+      width: 26px;
+      height: 30px;
+      background: url(../img/sousuo.png) no-repeat center; }
+  nav #gouwuche {
+    float: left;
+    margin: 27px 0 0 40px; }
+    nav #gouwuche a {
+      display: block;
+      width: 30px;
+      height: 30px;
+      background: url(../img/gouwuche.png) no-repeat center; }
+
+#box {
+  position: relative;
+  width: 1280px;
+  height: 520px; }
+
+/*# sourceMappingURL=index.css.map */
