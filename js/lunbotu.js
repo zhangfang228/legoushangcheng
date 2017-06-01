@@ -44,7 +44,7 @@ Slideshow.prototype.initUI=function(){
 	}
 	$(this.boxId+" img:first").css({"display":"block"});//第一张图的display要设置为block	
 //2、所有按钮的创建
-	let ulliStr="<ul style='position:absolute;right:40%;bottom:7px;z-index:999;display:flex;justify-content:space-between'>";	
+	let ulliStr="<ul style='position:absolute;right:30%;bottom:7px;z-index:999;display:flex;justify-content:space-between'>";	
 	for(let i=0;i<this.imgs.length;i++){
 	ulliStr+="<li ord='"+(i+1)+"'style='list-style:none;float:left;margin:10px;width:"+this.btnWidth+"px;height:"+this.btnHeight+"px;text-align:center;background-color:"+this.btnColor+";'>"
 	"</li>"
