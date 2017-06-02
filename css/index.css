@@ -64,7 +64,8 @@ header {
     margin-right: 6px; }
 
 nav {
-  height: 75px; }
+  height: 75px;
+  position: relative; }
   nav #logo {
     float: left;
     margin: 25px 0 0 5px; }
@@ -76,12 +77,44 @@ nav {
       color: #d70c18; }
   nav #nav {
     float: left;
-    margin: 36px 0 0 30px; }
+    margin-left: 20px; }
     nav #nav ul li {
       float: left;
-      margin: 0 19px;
-      font: 14px "";
-      color: #333; }
+      margin-top: 10px; }
+      nav #nav ul li a {
+        display: block;
+        padding: 0 20px;
+        height: 65px;
+        font: 14px/65px "";
+        color: #333; }
+      nav #nav ul li .xilie {
+        display: none;
+        padding-left: 40px;
+        position: absolute;
+        left: 0;
+        top: 75px;
+        width: 100%;
+        height: 190px;
+        background: #fcfcfc;
+        border-top: 1px solid #e6e6e6;
+        z-index: 20; }
+        nav #nav ul li .xilie .danpin {
+          float: left;
+          text-align: center;
+          width: 190px;
+          height: 190px; }
+          nav #nav ul li .xilie .danpin img {
+            margin-top: 20px;
+            width: 100px;
+            height: 100px; }
+          nav #nav ul li .xilie .danpin a {
+            font: 12px/28px ""; }
+          nav #nav ul li .xilie .danpin p {
+            color: #333; }
+          nav #nav ul li .xilie .danpin span {
+            color: red; }
+          nav #nav ul li .xilie .danpin:hover p {
+            color: red; }
       nav #nav ul li a:hover {
         color: red; }
   nav #search {
@@ -122,16 +155,57 @@ section {
     left: 32px;
     top: 64px;
     border-top: 2px solid #000;
-    background: #fff;
-    z-index: 10;
-    opacity: 0.5; }
-    section #aside ul a li {
+    z-index: 10; }
+    section #aside .te {
+      border-top: none; }
+    section #aside ul li {
+      opacity: 0.8;
+      padding-left: 16px;
       height: 65px;
-      margin: 0 16px;
       border-top: 1px solid #dbe7ed;
-      background: url(../img/youjiantou.png) no-repeat right;
+      background: #fff url(../img/youjiantou.png) no-repeat 190px;
       font: 14px/65px "";
       color: #000; }
+      section #aside ul li .first {
+        display: block;
+        width: 222px;
+        height: 65px; }
+      section #aside ul li .aside-r {
+        display: none;
+        width: 970px;
+        height: 395px;
+        border-top: 2px solid #000;
+        float: left;
+        position: absolute;
+        left: 222px;
+        top: -2px;
+        z-index: 20;
+        background: #fff; }
+        section #aside ul li .aside-r .r1 {
+          float: left;
+          width: 150px;
+          height: 350px;
+          margin-left: 30px;
+          font: 12px/20px "";
+          margin-top: 40px;
+          border-right: 1px solid #F4F4F4; }
+          section #aside ul li .aside-r .r1 dl dt {
+            font: 700 12px/32px "";
+            color: #000; }
+          section #aside ul li .aside-r .r1 dl dd {
+            font: 12px/24px ""; }
+            section #aside ul li .aside-r .r1 dl dd a {
+              color: #333; }
+            section #aside ul li .aside-r .r1 dl dd span {
+              color: #999; }
+        section #aside ul li .aside-r .last {
+          border-right: none; }
+        section #aside ul li .aside-r .r2 {
+          float: right;
+          margin: 15px 15px 0 0; }
+        section #aside ul li .aside-r .right {
+          width: 200px;
+          height: 360px; }
 
 #main {
   height: 700px;
@@ -142,7 +216,18 @@ section {
     justify-content: space-between;
     flex-warp: warp; }
     #main .mian-top ul li {
-      overflow: hidden; }
+      overflow: hidden;
+      position: relative; }
+      #main .mian-top ul li dl {
+        text-align: center;
+        font: 18px/28px "";
+        color: #333;
+        position: absolute;
+        top: 20px;
+        left: 100px; }
+        #main .mian-top ul li dl dd {
+          font: 12px/22px "";
+          color: #444; }
       #main .mian-top ul li:hover img {
         transition: 2s;
         transform: scale(1.05, 1.05); }
@@ -174,10 +259,18 @@ section {
         width: 238px;
         height: 340px;
         background: #fff;
-        text-align: center; }
+        text-align: center;
+        position: relative; }
+        #main .mian-bottom .remai li .hotmai {
+          position: absolute;
+          top: -15px;
+          right: 5px; }
         #main .mian-bottom .remai li:hover img {
           transition: 2s;
           transform: scale(1.05, 1.05); }
+        #main .mian-bottom .remai li:hover {
+          transition: 2s;
+          box-shadow: 5px 5px 5px #D3D3D3; }
         #main .mian-bottom .remai li img {
           margin: 20px 0; }
         #main .mian-bottom .remai li dl .lijigoumai {

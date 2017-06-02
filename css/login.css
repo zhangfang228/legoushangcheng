@@ -1,0 +1,71 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0; }
+
+.margin {
+  margin: 0 auto;
+  width: 1200px; }
+
+header {
+  height: 90px; }
+  header #logo {
+    float: left;
+    margin-top: 28px; }
+    header #logo img {
+      width: 47px;
+      height: 47px; }
+    header #logo span {
+      font: 700 36px/62px "宋体";
+      color: #5c6767; }
+  header #country {
+    float: right;
+    margin: 50px 18px 0 0;
+    font: 14px/40px "";
+    color: #a4a4a4; }
+    header #country b {
+      margin: 0 12px 0 14px; }
+    header #country a {
+      color: #a4a4a4; }
+    header #country .help {
+      text-decoration: none; }
+
+section {
+  width: 100%;
+  height: 484px;
+  border-top: 1px solid #eee;
+  background: url(../img/loginBanner.jpg) no-repeat center -57px;
+  position: relative; }
+  section #login {
+    width: 430px;
+    height: 460px;
+    background: #fff;
+    position: absolute;
+    right: 11px;
+    top: 12px; }
+    section #login .allLogin {
+      margin: 0 24px; }
+      section #login .allLogin .title {
+        display: flex;
+        justify-content: space-between;
+        flex-warp: warp;
+        font: 18px/85px ""; }
+        section #login .allLogin .title a {
+          text-decoration: none;
+          color: #52a7f3;
+          background: url(../img/shouji.png) no-repeat left;
+          padding-left: 12px;
+          font: 14px/85px ""; }
+      section #login .allLogin .input01 {
+        width: 380px;
+        height: 42px;
+        border: 1px solid #ccc;
+        background: url(../img/loginZhenghe.png) no-repeat;
+        background-position: center/10px center/10px; }
+        section #login .allLogin .input01 input {
+          margin-left: 46px;
+          border: 0;
+          font: 12px/42px "";
+          color: #929292; }
+
+/*# sourceMappingURL=login.css.map */
