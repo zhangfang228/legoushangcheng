@@ -295,9 +295,11 @@ section {
   height: 500px;
   overflow: hidden;
   position: relative; }
-  #hot .hot-t img {
-    position: absolute;
-    left: -280px; }
+  #hot .hot-t .hot01 {
+    display: block;
+    width: 100%;
+    height: 500px;
+    background: url(../img/hot01.jpg) no-repeat center center; }
   #hot .hot-t:hover .price1 {
     border-bottom: 1px solid darkgray; }
   #hot .hot-t .zhineng {
@@ -320,9 +322,11 @@ section {
   height: 500px;
   overflow: hidden;
   position: relative; }
-  #hot .hot-c img {
-    position: absolute;
-    left: -320px; }
+  #hot .hot-c .hot02 {
+    display: block;
+    width: 100%;
+    height: 500px;
+    background: url(../img/hot02.jpg) no-repeat center center; }
   #hot .hot-c:hover .price2 {
     border-bottom: 1px solid darkgray; }
   #hot .hot-c .huiyuan {
@@ -505,7 +509,8 @@ footer {
         border: 1px solid #575756;
         text-align: center;
         background: #2d2c2d;
-        color: #e0e0e0; }
+        color: #e0e0e0;
+        font: 12px/32px ""; }
         footer ul .tel a:hover {
           background: #575756; }
   footer .friend {

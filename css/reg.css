@@ -45,6 +45,11 @@ section {
     top: 12px; }
     section #login .allLogin {
       margin: 0 24px; }
+      section #login .allLogin p {
+        font: 12px/20px "";
+        color: red;
+        height: 20px;
+        width: 100%; }
       section #login .allLogin .title {
         display: flex;
         justify-content: space-between;
@@ -53,8 +58,6 @@ section {
         section #login .allLogin .title a {
           text-decoration: none;
           color: #52a7f3;
-          background: url(../img/shouji.png) no-repeat left;
-          padding-left: 12px;
           font: 14px/85px ""; }
       section #login .allLogin input {
         margin-left: 5px;
@@ -73,13 +76,10 @@ section {
           height: 31px;
           background: url(../img/loginZhenghe.png) no-repeat;
           background-position: 10px 10px; }
-        section #login .allLogin .input01 img {
-          vertical-align: middle; }
       section #login .allLogin .input02 {
         width: 380px;
         height: 42px;
-        border: 1px solid #ccc;
-        margin-top: 15px; }
+        border: 1px solid #ccc; }
         section #login .allLogin .input02 span {
           display: inline-block;
           width: 30px;
@@ -87,16 +87,63 @@ section {
           background: url(../img/loginZhenghe.png) no-repeat;
           background-position: -190px 10px; }
       section #login .allLogin .input03 {
+        width: 380px;
+        height: 42px;
+        border: 1px solid #ccc;
         font: 14px/42px ""; }
+        section #login .allLogin .input03 i {
+          display: inline-block;
+          width: 35px;
+          height: 24px;
+          background: url(../img/loginZhenghe.png) no-repeat;
+          background-position: -287px 10px; }
         section #login .allLogin .input03 input {
-          flaot: left;
+          width: 285px;
+          height: 22px; }
+        section #login .allLogin .input03 a {
+          float: right;
+          text-decoration: none;
+          color: #52a7f3; }
+      section #login .allLogin .yanzheng {
+        float: left;
+        width: 220px;
+        height: 42px;
+        border: 1px solid #ccc;
+        font: 14px/42px ""; }
+        section #login .allLogin .yanzheng i {
+          display: inline-block;
+          width: 30px;
+          height: 28px;
+          background: url(../img/loginZhenghe.png) no-repeat;
+          background-position: -390px 10px; }
+        section #login .allLogin .yanzheng input {
+          margin-left: 5px;
+          border: 0;
+          font: 14px/22px "";
+          color: #929292;
+          width: 100px;
+          height: 22px; }
+      section #login .allLogin .huoqu {
+        float: right;
+        width: 145px;
+        height: 42px;
+        text-align: center;
+        font: 14px/42px "";
+        border: 1px solid #52a7f3; }
+        section #login .allLogin .huoqu a {
+          display: block;
+          width: 145px;
+          height: 42px;
+          color: #52a7f3;
+          text-decoration: none; }
+      section #login .allLogin .xieyi {
+        font: 14px/42px ""; }
+        section #login .allLogin .xieyi input {
           width: 12px;
           height: 12px;
           margin-right: 5px;
           color: #666; }
-        section #login .allLogin .input03 a {
-          float: right;
-          text-decoration: none;
+        section #login .allLogin .xieyi a {
           color: #52a7f3; }
       section #login .allLogin .input04 input {
         width: 380px;
@@ -135,4 +182,4 @@ section {
         background: url(../img/share.png) no-repeat center;
         background-position: 0 0; }
 
-/*# sourceMappingURL=login.css.map */
+/*# sourceMappingURL=reg.css.map */

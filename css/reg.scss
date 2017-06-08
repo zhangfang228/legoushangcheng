@@ -50,19 +50,22 @@ section{
         top:12px;
         .allLogin{
             margin:0 24px;
-            
+            p{
+                  font:12px/20px "" ;
+                  color:red; 
+                  height:20px; 
+                  width:100%;
+                }
             .title{
                 display:flex;
                 justify-content: space-between;
                 flex-warp:warp;
                 font:18px/85px "";
                 
-                a{
-                   
+                a{                 
                     text-decoration: none; 
                     color:#52a7f3;
-                    background:url(../img/shouji.png) no-repeat left;
-                    padding-left:12px;
+                    
                     font:14px/85px "";
                 }
             }
@@ -80,6 +83,7 @@ section{
                 width:380px;
                 height:42px;
                 border:1px solid #ccc;
+                
                 span{
                 display: inline-block;
                 width:28px;
@@ -88,17 +92,15 @@ section{
                 background-position:10px 10px;
                 
                 }
-                img{
-                    vertical-align: middle;
-                   
-                }
+  
+                
                                       
             }
             .input02{
                 width:380px;
                 height:42px;
                 border:1px solid #ccc;
-                margin-top:15px;
+                //margin:20px 0;
                 span{
                 display: inline-block;
                 width:30px;
@@ -110,10 +112,83 @@ section{
                 
             }
             .input03{
+                width:380px;
+                height:42px;
+                border:1px solid #ccc;
+                //margin-top:15px;
+                font:14px/42px "";
+                i{
+                display: inline-block;
+                width:35px;
+                height:24px;
+                background:url(../img/loginZhenghe.png) no-repeat;
+                background-position:-287px 10px;
+                
+                }
+                input{                 
+                    width:285px;
+                    height:22px;
+                   
+                }
+                
+                a{
+                    float:right;
+                    text-decoration: none;
+                    color:#52a7f3;
+                }
+                
+                
+            }
+            .yanzheng{
+                 float:left;
+                width:220px;
+                height:42px;
+                border:1px solid #ccc;
+                //margin:15px 0;
+                //margin-top:15px;
+                font:14px/42px "";
+                i{
+                   
+                display: inline-block;
+                width:30px;
+                height:28px;
+                background:url(../img/loginZhenghe.png) no-repeat;
+                background-position:-390px 10px;
+                
+                }
+                input{
+                    
+                    margin-left:5px;
+                    border:0;
+                    font:14px/22px "";
+                    color:#929292;
+                    width:100px;
+                    height:22px;
+                   
+                }
+            }
+            .huoqu{
+                float:right;
+                width:145px;
+                height:42px;
+                //margin:15px 0;
+                text-align: center;
+                font:14px/42px "";
+                border:1px solid #52a7f3;
+                a{
+                   display: block;
+                   width:145px;
+                height:42px;
+                   color:#52a7f3;
+                   text-decoration: none;
+                }
+                
+            }
+            .xieyi{
                 //margin-top:15px;
                 font:14px/42px "";
                 input{
-                    flaot:left;
+                    
                     width:12px;
                     height:12px;
                     margin-right:5px;
@@ -121,12 +196,13 @@ section{
                     color:#666;
                 }
                 a{
-                    float:right;
-                    text-decoration: none;
+                    
+                    
                     color:#52a7f3;
                 }
                 
             }
+            
             .input04{
                 input{
                     width:380px;
