@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link href="css/shoppingCart.css" rel="stylesheet" type="text/css">
+		<link href="css/public.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<header>
+			<div class="margin">
+				<ul id="ulId">		       			        	
+		        	<li>
+		            	<a href="#">帮助中心<img src="img/cartsanjiao.png"/></a>
+		            </li>
+		            <li>
+		            	<a href="reg.html" id="register" class="hover">注册</a>
+		            </li>
+		            <li>       		
+		        		<span>|</span>
+		        	</li>
+		        	<li>
+		            	<a href="login.html" id="login" class="hover">登录</a>
+		            </li>
+		        	
+				</ul>
+						
+			</div>	
+		</header>
+	<nav id="logo">
+		<div class="margin">
+			<div class="logo clear">
+				<a href="#"><img src="img/logo.png" /><span>乐购商城</span></a>
+				<b>我的购物车</b>
+			</div>
+			<div class="shunxu clear">
+				<img src="img/shunxu.png" />
+				<span>我的购物车</span>
+				<span>填写核对订单信息</span>
+				<span>成功提交订单</span>
+			</div>			
+		</div>		
+	</nav>
+	<div id="product" class="margin">
+		<div class="title">
+			<p class="clear"><span>全部商品</span><!--<b class="count">1</b>--></p>		
+			<div class="address clear">
+				<span>配送地区</span>
+				
+				<select id="provinceSelect">
+					<option value="北京">北京</option>
+					<option>陕西</option>
+					<option>四川</option>
+				</select>省
+				<select id="citySelect">
+					<option>朝阳</option>
+					<option>海淀</option>
+				</select>市			
+			</div>	
+		</div>
+		<table id="tableId">
+			<tr class="tr01">
+				<td>序号</td>
+				<td>商品</td>
+				<td>单价（元）</td>
+				<td>数量</td>
+				<td>小计（元）</td>
+				<td>操作</td>
+			</tr>
+			<!--<tr>
+				<td>001</td>
+				<td><a href="#"><img src="img/tvl01.jpg"/><span class="name">4 X55M</span></a></td>
+				<td>￥<span id="priceId">3699.00</span></td>
+				<td>
+					<div  class="num">
+					<p>
+						<input type="button" id="btnjianId" value="-" />
+						<span id="count">1</span>					
+						<input type="button" id="addBtnId" value="+" />					
+					</p>
+					</div>
+				</td>
+				<td id="xiaoji">3699.00</td>
+				<td id="selectId" class="delect"><a href="#">删除</a></td>
+			</tr>
+			-->
+			
+		</table>
+		
+		
+	</div>
+	<section id="jiesuan">
+		<div class="jiesuan margin">
+			<a class="left" href="goodsList.html">继续购物</a>
+			<p class="right"><span>总计（不含运费）：</span><b>￥<i id="total"></i></b><a href="#">去结算</a></p>
+		</div>	
+	</section>
+	<section class=" like margin">
+		<div class="title01 clear">
+			<h4>猜你喜欢</h4>
+			<a id="change" href="#">换一批</a>
+		</div>
+		<div class="chanpin">
+		<ul class="ulId01">
+			<li>
+				<a href="#"><img src="img/like01.jpg"/></a>
+				<a class="name" href="#">蓝牙耳机</a>
+				<p>￥99.00</p>	
+				<a class="goumai" href="#">立即购买</a>
+			</li>
+			<li>
+				<a href="#"><img src="img/like02.jpg"/></a>
+				<a class="name" href="#">超级头盔</a>
+				<p>￥199.00</p>	
+				<a class="goumai" href="#">立即购买</a>
+			</li>
+			<li>
+				<a href="#"><img src="img/like03.jpg"/></a>
+				<a class="name" href="#">反戴式耳机</a>
+				<p>￥299.00</p>
+				<a class="goumai" href="#">立即购买</a>
+			</li>
+			<li>
+				<a href="#"><img src="img/like04.jpg"/></a>
+				<a class="name" href="#">超能大白U盘</a>
+				<p>￥89.00</p>	
+				<a class="goumai" href="#">立即购买</a>
+			</li>
+			<li>
+				<a href="#"><img src="img/like05.jpg"/></a>
+				<a class="name" href="#">车机套装</a>
+				<p>￥299.00</p>
+				<a class="goumai" href="#">立即购买</a>
+			</li>
+		</ul>
+<!--		
+		<ul class="ulId02" style="display: none;">
+			<li>
+				<a href="#"><img src="img/like01.jpg"/></a>
+				<a class="name" href="#">蓝牙耳机</a>
+				<p>￥99.00</p>	
+				<a class="goumai" href="#">立即购买</a>
+			</li>
+			<li>
+				<a href="#"><img src="img/like02.jpg"/></a>
+				<a class="name" href="#">超级头盔</a>
+				<p>￥199.00</p>
+				<a class="goumai" href="#">立即购买</a>
+			</li>
+			<li>
+				<a href="#"><img src="img/like03.jpg"/></a>
+				<a class="name" href="#">反戴式耳机</a>
+				<p>￥299.00</p>
+				<a class="goumai" href="#">立即购买</a>
+			</li>
+			<li>
+				<a href="#"><img src="img/like04.jpg"/></a>
+				<a class="name" href="#">超能大白U盘</a>
+				<p>￥89.00</p>	
+				<a class="goumai" href="#">立即购买</a>
+			</li>
+			<li>
+				<a href="#"><img src="img/like05.jpg"/></a>
+				<a class="name" href="#">车机套装</a>
+				<p>￥299.00</p>
+				<a class="goumai" href="#">立即购买</a>
+			</li>
+		</ul>
+		-->
+		
+	</section>
+	<section id="baozhang">
+	<div class="margin">
+		<ul>
+			<li><img src="img/zheng.png"><span>正品保障</span></li>
+			<li><a href="#"><img src="img/qitian.png"/><span>7天无理由退货</span></a></li>
+			<li><a href="#"><img src="img/liwu.png"/><span>满150包邮</span></a></li>
+			<li><a href="#"><img src="img/dizhi.png"/><span>售后服务网点</span></a></li>		
+		</ul>	
+	</div>		
+</section>
+<footer>
+	<div class="margin">
+		<ul class="clear">
+			<li>
+				<dl>
+					<dt>生态品类</dt>
+					<dd><a href="#">超级电视</a></dd>
+					<dd><a href="#">超级手机</a></dd>
+					<dd><a href="#">智能硬件</a></dd>
+					<dd><a href="#">娱乐周边</a></dd>
+					<dd><a href="#">乐购会员</a></dd>
+				</dl>								
+			</li>
+			<li>
+				<dl>
+					<dt>生态服务</dt>
+					<dd><a href="#">生态头条</a></dd>
+					<dd><a href="#">乐迷社区</a></dd>
+					<dd><a href="#">比一比</a></dd>
+					<dd><a href="#">问一问</a></dd>					
+				</dl>								
+			</li>
+			<li>
+				<dl>
+					<dt>帮助中心</dt>
+					<dd><a href="#">新手入门</a></dd>
+					<dd><a href="#">订单服务</a></dd>
+					<dd><a href="#">物流服务</a></dd>
+					<dd><a href="#">售后政策</a></dd>
+					<dd><a href="#">安装保修</a></dd>
+					<dd><a href="#">自助服务</a></dd>
+				</dl>								
+			</li>
+			<li>
+				<dl>
+					<dt>服务支持</dt>
+					<dd><a href="#">线下体验厅</a></dd>
+					<dd><a href="#">线下LePar店</a></dd>
+					<dd><a href="#">售后服务网点</a></dd>
+					<dd><a href="#">销售联盟</a></dd>
+					<dd><a href="#">分享邀请</a></dd>
+					<dd><a href="#">乐码通道</a></dd>
+				</dl>								
+			</li>
+			<li>
+				<dl>
+					<dt>关于乐购商城</dt>
+					<dd><a href="#">公司介绍</a></dd>
+					<dd><a href="#">联系我们</a></dd>
+					<dd><a href="#">加入我们</a></dd>
+					<dd><a href="#">关注我们</a></dd>
+				</dl>								
+			</li>
+			<li class="tel">
+				<b>1010-9000</b>
+				<p>7*24小时客服电话</p>
+				<a href="#">在线客服8:00-12:00</a>
+			</li>		
+		</ul>
+		<div class="friend">
+			<h4><a href="#">友情链接：</a></h4>
+			<a href="#">乐购商城触屏版</a>
+			<a href="#">乐购</a>
+			<a href="#">乐购TV</a>
+			<a href="#">乐购手机</a>
+			<a href="#">乐购会员</a>
+			<a href="#">乐购超级手机</a>
+			<a href="#">乐2</a>
+			<a href="#">乐2 Pro</a>
+			<a href="#">乐Max 2</a>
+			<a href="#">乐购云</a>
+			<a href="#">车联网</a>
+			<a href="#">乐购应用商店</a>
+			<a href="#">播视网视频</a>
+			<a href="#">温州视线</a>
+			<a href="#">卡车之家</a>
+			<a href="#">中国品牌网</a>
+			<a href="#">百纳网</a>
+			<a href="#">绿盟下载</a>
+			<a href="#">寻购网</a>
+			<a href="#">上海房产网</a>
+			<a href="#">什么值得买</a>
+			<a href="#">苹果手机助手</a>
+			<a href="#">平板电脑</a>
+			<a href="#">科学网</a>
+			<a href="#">放心游商城</a>
+			<a href="#">52PK游戏网</a>
+			<a href="#">衣联网</a>
+			<a href="#">万表网</a>
+			<a href="#">新物种FF91</a>
+			<a href="#">亿智蘑菇</a>
+		</div>
+		<div class="end">
+			
+			<i>Coparight&copy;2004-2017 乐购电子商务（北京）有限公司 All rights reserved.备案/许可证编号为：京ICP备16033412号-1 网络文化经营许可证文网文[2009]221号</i>
+		</div>
+		
+	</div>
+	
+	
+</footer>
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+<script type="text/javascript" src="js/shengshilaindong.js" ></script>
+<script type="text/javascript">
+$(function(){
+//	var num = $("#count").html();
+//	var price = parseInt($("#priceId").html());
+//	$("#addBtnId").click(function(){		
+//		num++;
+//		$("#count").html(num);		
+//		$("#xiaoji").html(price*num);
+//		$("#total").html($("#xiaoji").html());
+//	});	
+//  $("#btnjianId").click(function(){    	    	
+//		num--;
+//		if(num<=1){
+//			num=1;
+//		}
+//		$("#count").html(num);		
+//		$("#xiaoji").html(price*num);	
+//		$("#total").html($("#xiaoji").html());
+//  });
+    function getCookie(key){
+		//1、获取cookie的内容；//color=red; userName=jzm; password=123; auserName=ppp
+		var str = decodeURIComponent(document.cookie);
+		//2、转换成数组
+		var arr = str.split("; ");
+		
+		//3、循环数组找key
+		for(var i=0;i<arr.length;i++){
+			if(arr[i].indexOf(key+"=")==0){
+				return arr[i].substring((key+"=").length);
+			}
+		}
+		//4、返回
+		return "";
+	}
+    
+    var vipName = getCookie("userName");
+    //console.log(vipName);
+    //var $userName = getCookie("userName");
+	if(vipName!=""){
+		$("#login").html("欢迎您，"+vipName);
+		$("#register").html("注销");
+		$("#register").attr("href","login.html");
+		getShoppingCart(vipName);
+	}
+    
+    
+    function getShoppingCart(){
+	    $.get("getShoppingCart.php",{"vipName":vipName},function(data){
+	    	//console.log(data);
+	    	var obj = eval(data);
+	    	//console.log(obj[0].goodsPrice);
+	    	
+	    	var str1="";
+	    	var sum = 0;
+	    	var num =1;
+			for(var i in obj){
+				str1+='<tr ord="'+obj[i].goodsId+'"><td>'+(num)+'</td><td><a href="#"><img src="'+obj[i].goodsImg+'"/><span class="name">'+obj[i].goodsName+'</span></a></td><td>￥<span id="priceId">'+obj[i].goodsPrice+'</span></td><td><div  class="num"><p><input type="button" id="btnjianId" value="-" /><span id="count">'+obj[i].goodsCount+'</span><input type="button" id="addBtnId" value="+" /></p></div></td><td id="xiaoji">'+(obj[i].goodsPrice*obj[i].goodsCount)+'</td><td id="selectId" class="delect"><a href="#">删除</a></td></tr>'
+				sum+=(obj[i].goodsPrice*obj[i].goodsCount);
+				num++;
+			}
+			$(".tr01").siblings().remove();
+			$("#total").html(sum);
+			$("#tableId").append(str1);				   	
+    });
+    
+   }
+  
+   $("#tableId").delegate(".delect","click",function(){
+   		var goodsId = $(this).parent().attr("ord");
+   		console.log(goodsId);
+   		var obj = this;
+	   $.get("deleteGoods.php",{vipName:vipName,goodsId:goodsId},function(data){
+	   	console.log(data);
+	   		if(data==1){
+	   			$(obj).parent().remove();
+	   			getShoppingCart(vipName);
+	   		}else{
+	   			alert("删除失败，请再次尝试！");
+	   		}
+	   			
+	   			
+	   			
+	   		});
+ 	
+   	
+   });
+    
+    
+    
+	
+});
+//显示省
+function showProvince(){
+	var provinceSelect = document.getElementById("provinceSelect");
+	provinceSelect.innerHTML="";
+	for(var i=0;i<cityObj.城市代码.length;i++){
+		var option = document.createElement("option");
+		option.innerHTML = cityObj.城市代码[i].省;
+		option.value = cityObj.城市代码[i].省;
+		provinceSelect.appendChild(option);
+	}
+}
+
+//显示城市
+//参数：省
+function showCity(provinceName){
+	var citySelect = document.getElementById("citySelect");
+	citySelect.innerHTML="";
+	//1、先在json中查找对应的省
+	var citys = null;
+	for(var i=0;i<cityObj.城市代码.length;i++){
+		if(cityObj.城市代码[i].省==provinceName){
+			citys = cityObj.城市代码[i].市;
+			break; 
+		}
+	}
+	
+	//2、把该省的市循环显示出来	
+	for(var i=0;i<citys.length;i++){
+		var option = document.createElement("option");
+		option.innerHTML = citys[i].市名;		
+		option.value = citys[i].编码;
+		citySelect.appendChild(option);		
+	}
+
+}
+
+window.onload = function(){	
+	//alert(cityObj.城市代码[0].省);
+	//alert(cityObj.城市代码[0].市[1].市名);
+	showProvince();
+	showCity(provinceSelect.value);
+	
+	 provinceSelect.onchange = function(){
+		showCity(this.value);
+	 }
+	
+}
+	
+	
+</script>
