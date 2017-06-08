@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/reg.css" />
+	</head>
+<body onload="testF()">
+	<header class="margin clear">
+		<a href="index.html"><div id="logo">
+			<img src="img/loginLogo.png" /><span>乐购</span>
+		</div></a>
+		<div id="country">
+			<span>语言：</span><a href="#">简体中文</a><b>|</b>
+			<span>国家/地区：</span><a href="#">中国</a><b>|</b>
+			<a class="help" href="#">帮助</a>
+		</div>		
+	</header>	
+	<section>
+		<div id="login" class="margin">
+				
+				<div class="allLogin">
+					<div class="title">
+						<span>注册</span>
+						<a href="#">立即登录</a>
+					</div>
+					<div class="input01">
+						<span></span>
+						<input id="userName" name="userName" type="text" placeholder="手机号" />
+						
+					</div>
+					<p id="userMsg"></p>
+					<div class="input02">
+						<span></span>
+						<input id="userPass" name="userPass" type="password" placeholder="密码"/>
+						
+					</div>
+					
+					<p id="passMsg"></p>
+					<div class="input03">
+						<i></i>
+						<input type="text" id="checkCode" placeholder="输入验证码，点击图片更换"/>	
+						<span id="showCode" onclick="testF()" style="background-color:#ccc"></span>								    
+					    
+					    
+					</div>
+					<p id="yanzhengma"></p>
+					<div class="yanzheng">
+						<i></i>
+						<input type="text" placeholder="6位验证码" />
+						
+					</div>
+					<div class="huoqu">
+						<a href="#">获取验证码</a>	
+						
+					</div>
+					<div class="xieyi">
+						<input type="radio" checked="checked"/><span>我已阅读并同意</span>
+						<a href="#">乐购用户协议</a>
+					</div>
+					
+					
+					<div class="input04">
+						<input id="btnId" type="button" value="注册"/>
+						
+					</div>
+					
+					
+				</div>
+				
+				
+			
+		</div>
+		
+	</section>		
+		
+		
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+
+<script type="text/javascript">
+	function testF(){
+		var i=0;
+		var str="";
+		while(i<4){
+			var num1=parseInt(Math.random()*123);
+			if((num1>=48 && num1<=57)||(num1>=65 && num1<=90)||(num1>=97 && num1<=122)){
+				str+=String.fromCharCode(num1);
+				i++;
+			}
+		}
+		document.getElementById("showCode").innerHTML=str;
+	}
+	var checkCode = document.getElementById("checkCode");
+	
+	checkCode.onblur=function(){
+		var checkCode=document.getElementById("checkCode").value;
+		var showCode=document.getElementById("showCode").innerHTML;
+		checkCode=checkCode.toLowerCase();//验证码转化成小写字母;
+		showCode=showCode.toLowerCase();
+		if(checkCode==showCode){
+			document.getElementById("yanzhengma").innerHTML="验证正确";
+		}else{
+			document.getElementById("yanzhengma").innerHTML="请重新验证";
+			return;
+		}
+		
+	}
+	var userPass = document.getElementById("userPass");
+	userPass.onblur=function(){
+		if(userPass.value.length<4 || userPass.value.length>16){
+		document.getElementById("passMsg").innerHTML="请输入的密码长度为4-20之间";
+		
+		return;
+		}else{
+			document.getElementById("passMsg").innerHTML="";
+		}
+	}
+	
+	
+	
+	
+	
+$(function(){
+		
+		$("#userName").blur(function(){
+			//手机号码：11位，  1开头（后者13|18|17），其余全是数字
+			//var reg = /^1[0-9]{10}$/;
+			var reg = /^1[35784][0-9]{9}$/;
+			var str= $("#userName").val();			
+			if(reg.test(str)){
+				$.get("checkUser.php",{userName:$("#userName").val()},function(data){
+				if(data=="1"){
+					$("#userMsg").html("此用户名可以使用，赶紧注册吧");
+				}else{
+					$("#userMsg").html("！此用户名已存在，请重新选择用户名×");
+				}
+				});
+				$("#userMsg").html("");
+				
+			}else{
+				$("#userMsg").html("请输入正确的电话号码");
+				return;
+			}
+		});
+		
+		
+		
+		
+		
+	
+	$("#btnId").click(function(){
+		
+		$.post("reg.php",{userName:$("#userName").val(),userPass:$("#userPass").val()});		
+		
+		location.href="login.html";
+	});
+	
+	
+	/*$("#userName").blur(function(){
+		$.get("checkUser.php",{user:$("#userName").val()},function(data){
+			if(data=="1"){
+				$("#userMsg").html("此用户名可以使用，赶紧注册吧");
+			}else{
+				$("#userMsg").html("！此用户名已存在，请重新选择用户名×");
+			}
+		});		
+	});
+	*/
+	
+	
+});
+	
+</script>
