@@ -48,13 +48,13 @@
         </ul>
         <ul id="header-l">
         	<li>
-            	<a href="#" id="login" class="hover">登录</a>
+            	<a href="login.html" id="login" class="hover">登录</a>
             </li>
         	<li>       		
         		<span>|</span>
         	</li>
         	<li>
-            	<a href="#" id="register" class="hover">注册</a>
+            	<a href="reg.html" id="register" class="hover">注册</a>
             </li>
         </ul>
 	</div>
@@ -202,7 +202,7 @@
 		<a href="#"></a>							
 	</div>
 	<div id="gouwuche">
-		<a href="#"></a>
+		<a href="shoppingCart.html"></a>
 	</div>
 </div>
 </nav>
@@ -245,16 +245,16 @@
 					<div class="r1">
 						<dl>
 							<dt>电视类型</dt>
-							<dd><a href="#">分体电视</a></dd>
-							<dd><a href="#">全面屏电视</a></dd>
-							<dd><a href="#">曲面电视</a></dd>
-							<dd><a href="#">超薄电视</a></dd>
-							<dd><a href="#">量子点</a></dd>
-							<dd><a href="#">高色域</a></dd>
-							<dd><a href="#">Dolby Vision HDR</a></dd>
-							<dd><a href="#">4K超清电视</a></dd>
-							<dd><a href="#">3D电视</a></dd>
-							<dd><a href="#">智能全高清</a></dd>
+							<dd><a href="goodsList.html">分体电视</a></dd>
+							<dd><a href="goodsList.html">全面屏电视</a></dd>
+							<dd><a href="goodsList.html">曲面电视</a></dd>
+							<dd><a href="goodsList.html">超薄电视</a></dd>
+							<dd><a href="goodsList.html">量子点</a></dd>
+							<dd><a href="goodsList.html">高色域</a></dd>
+							<dd><a href="goodsList.html">Dolby Vision HDR</a></dd>
+							<dd><a href="goodsList.html">4K超清电视</a></dd>
+							<dd><a href="goodsList.html">3D电视</a></dd>
+							<dd><a href="goodsList.html">智能全高清</a></dd>
 						</dl>
 					</div>
 					<div class="r1 last">
@@ -582,7 +582,7 @@
 </section>
 <section id="hot">
 	<div class="hot-t">
-		<a href="#"><img src="img/hot01.jpg" /></a>
+		<a class="hot01" href="#"></a>
 		<div class="zhineng">
 			<a href="#"><dl>
 				<dt>乐Pro3 双摄AI版</dt>
@@ -593,7 +593,7 @@
 	</div>
 	
 	<div class="hot-c">
-		<a href="#"><img src="img/hot02.jpg" /></a>
+		<a class="hot02" href="#"></a>
 		<div class="huiyuan">
 			<a href="#"><dl>
 				<dt>超4 X55M</dt>
@@ -884,9 +884,32 @@ $(function(){
 	});
 	
 	
+	var $userName = getCookie("userName");
+	if($userName!=""){
+		$("#login").html("欢迎您，"+$userName);
+		$("#register").html("注销");
+		$("#register").attr("href","login.html");
+	}
 	
 	
+	function getCookie(key){
+		//1、获取cookie的内容；//color=red; userName=jzm; password=123; auserName=ppp
+		var str = decodeURIComponent(document.cookie);
+		//2、转换成数组
+		var arr = str.split("; ");
+		
+		//3、循环数组找key
+		for(var i=0;i<arr.length;i++){
+			if(arr[i].indexOf(key+"=")==0){
+				return arr[i].substring((key+"=").length);
+			}
+		}
+		//4、返回
+		return "";
+	}
 	
+	
+	/*$("#login").html("欢迎您，")*/
 	
 	
 	
