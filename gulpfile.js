@@ -1,0 +1,71 @@
+var gulp=require("gulp");
+
+gulp.task("copy-index",function(){
+	gulp.src("index.html")
+	.pipe(gulp.dest("D:/phpStudy/WWW/zhangfang/xiangmu"));
+});
+gulp.task("copy-js",function(){
+	gulp.src("js/*.js")
+	.pipe(gulp.dest("D:/phpStudy/WWW/zhangfang/xiangmu/js"));
+});
+gulp.task("copy-css",function(){
+	gulp.src("css/*.css")
+	.pipe(gulp.dest("D:/phpStudy/WWW/zhangfang/xiangmu/css"));
+});
+gulp.task("copy-img",function(){
+	gulp.src("img/*.{png,jpg}")
+	.pipe(gulp.dest("D:/phpStudy/WWW/zhangfang/xiangmu/img"));
+});
+gulp.task("copy-login",function(){
+	gulp.src("login.html")
+	.pipe(gulp.dest("D:/phpStudy/WWW/zhangfang/xiangmu"));
+});
+gulp.task("copy-reg",function(){
+	gulp.src("reg.html")
+	.pipe(gulp.dest("D:/phpStudy/WWW/zhangfang/xiangmu"));
+});
+gulp.task("copy-regphp",function(){
+	gulp.src("reg.php")
+	.pipe(gulp.dest("D:/phpStudy/WWW/zhangfang/xiangmu"));
+});
+gulp.task("copy-checkUser",function(){
+	gulp.src("checkUser.php")
+	.pipe(gulp.dest("D:/phpStudy/WWW/zhangfang/xiangmu"));
+});
+gulp.task("copy-loginphp",function(){
+	gulp.src("login.php")
+	.pipe(gulp.dest("D:/phpStudy/WWW/zhangfang/xiangmu"));
+});
+gulp.task("copy-activity",function(){
+	gulp.src("activity.html")
+	.pipe(gulp.dest("D:/phpStudy/WWW/zhangfang/xiangmu"));
+});
+gulp.task("copy-goodsList",function(){
+	gulp.src("goodsList.html")
+	.pipe(gulp.dest("D:/phpStudy/WWW/zhangfang/xiangmu"));
+});
+gulp.task("copy-projectDetails",function(){
+	gulp.src("projectDetails.html")
+	.pipe(gulp.dest("D:/phpStudy/WWW/zhangfang/xiangmu"));
+});
+gulp.task("copy-shoppingCart",function(){
+	gulp.src("shoppingCart.html")
+	.pipe(gulp.dest("D:/phpStudy/WWW/zhangfang/xiangmu"));
+});
+
+
+gulp.task("watch",function(){
+	gulp.watch("index.html",["copy-index"]);
+	gulp.watch("login.html",["copy-login"]);
+	gulp.watch("reg.html",["copy-reg"]);
+	gulp.watch("projectDetails.html",["copy-projectDetails"]);
+	gulp.watch("activity.html",["copy-activity"]);
+	gulp.watch("goodsList.html",["copy-goodsList"]);
+	gulp.watch("shoppingCart.html",["copy-shoppingCart"]);
+	gulp.watch("reg.php",["copy-regphp"]);
+	gulp.watch("checkUser.php",["copy-checkUser"]);
+	gulp.watch("login.php",["copy-loginphp"]);
+	gulp.watch("js/*.js",["copy-js"]);
+	gulp.watch("css/*.css",["copy-css"]);
+	gulp.watch("img/*.{png,jpg}",["copy-img"]);
+})
